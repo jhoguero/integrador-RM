@@ -1,0 +1,17 @@
+.App {
+   text-align: center;
+   background-image: url('../public/fondo.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 94vh;
+}
+
+.down{
+   margin-bottom: 20px;
+}
+
+.title{
+   color: whitesmoke;
+   font-size: 50px;
+   font-family: 'Mynerve', cursive;
+}
