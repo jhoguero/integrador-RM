@@ -6,6 +6,10 @@
     align-items: center;
     margin-left: 30%;
     gap: 10px;
+    font-family: 'Mynerve', cursive;
+    font-size: 25px;
+    margin-top: 70px;
+    padding-bottom: 503px;
 }
 
 .InputStyle {

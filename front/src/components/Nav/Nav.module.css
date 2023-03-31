@@ -1,13 +1,18 @@
 .navBar{
     box-shadow: 0px 0px 80px 12px rgba(9,232,221,0.65);
     background: linear-gradient(70deg, rgba(0, 0, 255, 0.562), rgba(255, 192, 203, 0.552));
-    border-radius: 5px;
+    border-radius: 30px;
     margin-bottom: 20px;
+    width: 50%;
+    margin-left: 23%;
 }
 
 .links{
+    display: flex;
+    justify-content: space-evenly;
     font-family: 'Mynerve', cursive;
     color: white;
+    text-shadow: -2px 0px 2px rgb(0, 0, 0);
     margin: 5px;
     text-decoration: none;
     font-size: 20px;

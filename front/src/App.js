@@ -11,6 +11,7 @@ import Favorites from "./components/Favorites/Favorites";
 function App() {
   
   const Location = useLocation();
+  
   const navigate = useNavigate();
 
   const [characters,setCharacters]= useState([]);
@@ -31,17 +32,17 @@ function App() {
 
 
   const onSearch = (id) => {
-    const URL_BASE = `http://localhost:3001/rickandmorty/onsearch`;
+    const URL_BASE = `http://localhost:3001/rickandmorty`;
    /*  const KEY = "d3d9a36d85fe.fe8f603fd403c451414a"; */
 
-    fetch(`${URL_BASE}/character/${id}`)
+    fetch(`${URL_BASE}/onsearch/${id}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
         if (data.name && !characters.find((char) => char.id === data.id)) {
           setCharacters((oldchars) => [...oldchars, data]);
         } else {
-          alert("algo salio mal");
+          alert("Carta duplicada");
         }
       });
   };
@@ -51,8 +52,8 @@ function App() {
   };
 
   return (
-    <div className="App" style={{ padding: "25px" }}>
-      <h1 className="title">CARTAS RICK AND MORTY</h1>
+    <div className="App">
+      <h1 className="title">RICK AND MORTY CARDS</h1>
       <div>
       {Location.pathname === "/" ? <Form login={login}/>:<Nav onSearch={onSearch} />}
       </div>
